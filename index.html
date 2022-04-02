@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+
+
+    <title>Petits plats</title>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <header class="brand-logo">
+                        <img src="./assets/logo_petitsplats.png" alt="logo petits plats"/>
+                    </header>
+                </div>
+            </div>
+
+            <div class="row search-input">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control search-bar" placeholder="Rechercher une recette"  aria-label="Recherche recette" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="input_arguments" class="row inpoutz">
+                <!-- <div class="col-2 widz" id="col-ingredients">
+                    <div class="inpoute">
+                    <input class="bg-primary text-white input-elt" autocomplete="off" role="combobox" list="" id="inputingredients" name="dataingredients" placeholder="Ingrédients">
+                        <datalist id="dataingredients" role="listbox" class="browsers bg-primary text-white ">
+                            <option class="bg-primary text-white" value="Internet Explorer">Internet Explorer</option>
+                            <option class="bg-primary text-white" value="Chrome">Chrome</option>
+                            <option class="bg-primary text-white" value="Safari">Safari</option>
+                            <option class="bg-primary text-white" value="Microsoft Edge">Microsoft Edge</option>
+                            <option class="bg-primary text-white" value="Firefox">Firefox</option><option class="bg-primary text-white" value="Microsoft Edge">Microsoft Edge</option>
+                            <option class="bg-primary text-white" value="Firefox">Firefox</option><option class="bg-primary text-white" value="Microsoft Edge">Microsoft Edge</option>
+                        </datalist>
+                    </div>
+                </div>
+
+                <div class="col-2 widz" id="col-appareils">
+                    <div class="inpoute">
+                    <input  class="bg-success text-white input-elt" autocomplete="off" role="combobox" list="" id="inputappareil" name="dataappareil" placeholder="Appareils">
+                        <datalist id="dataappareil" role="listbox" class="browsers bg-success text-white  ">
+                            <option class="bg-success text-white" value="Internet Explorer">Internet Explorer</option>
+                            <option class="bg-success text-white" value="Chrome">Chrome</option>
+                            <option class="bg-success text-white" value="Safari">Safari</option>
+                            <option class="bg-success text-white" value="Microsoft Edge">Microsoft Edge</option>
+                            <option class="bg-success text-white" value="Firefox">Firefox</option><option class="bg-success text-white" value="Microsoft Edge">Microsoft Edge</option>
+                            <option class="bg-success text-white" value="Firefox">Firefox</option><option class="bg-success text-white" value="Microsoft Edge">Microsoft Edge</option>
+                        </datalist>
+                    </div>
+                </div>
+
+                <div class="col-2 widz" id="col-ustensiles">
+                    <div class="inpoute">
+                    <input class="bg-danger text-white input-elt" autocomplete="off" role="combobox" list="" id="inputustensiles" name="dataustensiles" placeholder="Ustensiles">
+                        <datalist id="dataustensiles" role="listbox" class="browsers bg-danger text-white ">
+                            <option class="bg-danger text-white" value="Internet Explorer">Internet Explorer</option>
+                            <option class="bg-danger text-white" value="Chrome">Chrome</option>
+                            <option class="bg-danger text-white" value="Safari">Safari</option>
+                            <option class="bg-danger text-white" value="Microsoft Edge">Microsoft Edge</option>
+                            <option class="bg-danger text-white" value="Firefox">Firefox</option><option class="bg-danger text-white" value="Microsoft Edge">Microsoft Edge</option>
+                            <option class="bg-danger text-white" value="Firefox">Firefox</option><option class="bg-danger text-white" value="Microsoft Edge">Microsoft Edge</option>
+                        </datalist>
+                    </div>
+                </div> -->
+            </div>
+
+
+
+
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="recette_section">
+            </div>
+
+        </div>
+        
+        <!-- Datas -->
+        <!-- <script src="scripts/data/data.js"></script> -->
+
+
+        <!-- Models -->
+        <script src="scripts/models/Recettes.js"></script>
+        <script src="scripts/models/Arguments.js"></script>
+
+        <!-- Templates -->
+        <script src="scripts/templates/recetteCard.js"></script>
+        <script src="scripts/templates/inputArguments.js"></script>
+
+        <!-- Api -->
+        <script src="scripts/api/Api.js"></script>
+
+        <!-- Entry point -->
+        <script src="scripts/App.js" type="module"></script>
+
+        <!-- Lib -->
+        <!-- <script src="scripts/lib/search-element-v2.js"></script> -->
+        <script src="scripts/lib/search-element.js"></script>
+
+
+    </body>
+</html>
