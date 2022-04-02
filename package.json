@@ -1,0 +1,22 @@
+{
+  "name": "benoitmouly_6_03032022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benoitMouly/BenoitMouly_6_03032022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benoitMouly/BenoitMouly_6_03032022/issues"
+  },
+  "homepage": "https://github.com/benoitMouly/BenoitMouly_6_03032022#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
