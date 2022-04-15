@@ -25,7 +25,7 @@
             <div class="row search-input">
                 <div class="col">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control search-bar" placeholder="Rechercher une recette"  aria-label="Recherche recette" aria-describedby="basic-addon2">
+                        <input type="text" id="search-input" class="form-control search-bar" placeholder="Rechercher une recette"  aria-label="Recherche recette" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                         <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
                         </div>
@@ -96,6 +96,9 @@
         <!-- Templates -->
         <script src="scripts/templates/recetteCard.js"></script>
         <script src="scripts/templates/inputArguments.js"></script>
+        <script src="scripts/templates/filteredCard.js"></script>
+        <script src="scripts/templates/filteredTemplate.js"></script>
+
 
         <!-- Api -->
         <script src="scripts/api/Api.js"></script>
@@ -106,7 +109,10 @@
         <!-- Lib -->
         <!-- <script src="scripts/lib/search-element-v2.js"></script> -->
         <script src="scripts/lib/search-element.js"></script>
+        <script src="scripts/lib/filter.js"></script>
 
+        <!-- Adapters -->
+        <script src="scripts/adapters/FilterAdapter.js"></script>
 
     </body>
 </html>

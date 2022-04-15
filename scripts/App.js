@@ -4,6 +4,7 @@ class App {
     constructor() {
         this.$recetteWrapper = document.querySelector('#recette_section')
         this.$inputWrapper = document.querySelector('#input_arguments');
+        this.$searchInput = document.querySelector('#search-input')
     }
 
     async main() {
@@ -58,7 +59,13 @@ class App {
             const input = new RecetteArguments(ingredientsData, appliancesData, ustensilsData);
             input.createRecetteInput()
             AddArguments.init()
-    }
+            const Filter = new FilterForm(recettesData)
+            this.$searchInput.addEventListener('input', function(e){
+                Filter.render(e)
+            }); 
+            // Filter.render()
+        }
+
 
 
 }
