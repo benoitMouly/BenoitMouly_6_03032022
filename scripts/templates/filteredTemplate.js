@@ -7,30 +7,16 @@ class FilterForm {
         this.$searchInput = document.querySelector('#search-input')
     }
 
-        async filterTitle(selectedArray) {
-
-        this.clearMediasWrapper()
-        if(selectedArray){
-            for(let i = 0; i < selectedArray.length; i++){
-                let AdaptedFilterLib = new FilterRecetteAdapter(this.recettes, selectedArray, this.ingredientsData) // nouvel Adaptater
-                let FilteredRecipeTitle = await AdaptedFilterLib.filterByWord() // filterByWord est la fonction qui filtre les recettes par titre
-
-                FilteredRecipeTitle.forEach(recette => {
-                    const template = new FilteredCard(recette)
-                    this.$RecettesHeader.appendChild(template.createRecetteCard())
-                })
-            }
-        }
-        else if(!selectedArray){
-            const AdaptedFilterLib = new FilterRecetteAdapter(this.recettes, selectedArray, this.ingredientsData) // nouvel Adaptater
-            const FilteredRecipeTitle = await AdaptedFilterLib.filterByWord() // filterByWord est la fonction qui filtre les recettes par titre
+        async filterTitle(selectedArray){
+            this.clearMediasWrapper()
+            let AdaptedFilterLib = new FilterRecetteAdapter(this.recettes, selectedArray, this.ingredientsData) // nouvel Adaptater
+            let FilteredRecipeTitle = await AdaptedFilterLib.filterByWord() // filterByWord est la fonction qui filtre les recettes par titre
 
             FilteredRecipeTitle.forEach(recette => {
                 const template = new FilteredCard(recette)
                 this.$RecettesHeader.appendChild(template.createRecetteCard())
             })
         }
-    }
 
     /**
      * @function onChangeFilter détecte l'input
@@ -54,20 +40,23 @@ class FilterForm {
 
                 if(selectedArray){
                     for(let t = 0; t < selectedArray.length; t++){
-                        const recipeFiltered = selectedArray[t]
+                        let recipeFiltered = selectedArray[t]
+                        if(recipeFiltered.length <= 3){
+                            selectedArray.splice(t, 1)
+                        }
                         for( let i = 0; i < blacklist.length; i++){
                             if ((blacklist[i] === recipeFiltered)){
-                               console.log(blacklist[i] + '------------------------------------------------------------------------')
-                                return // si ce qu'on a tapé appartient à la blacklist, on annule l'action
+                               console.log(blacklist[i] + ' ----------------------------ennemi detecté--------------------------------------------')
+                               selectedArray.splice(t , 1)
                             }
                         }
+                        
                     }
-                    console.log(selectedArray)
+                console.log(selectedArray)
                 this.filterTitle(selectedArray)
                 }
                 else{
-                this.filterTitle(null)
-                }
+                this.filterTitle(null)                }
 
 
             } else {
