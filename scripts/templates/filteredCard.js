@@ -2,7 +2,7 @@ class FilteredCard{
 
     constructor(recette) {
         this._recette = recette
-        console.log(recette)
+        // console.log(recette)
         this.$wrapper = document.createElement('div')
         this.$wrapper.classList.add('col')
         this.$wrapper.classList.add('mb-4')
