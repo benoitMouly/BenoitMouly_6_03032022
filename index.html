@@ -25,7 +25,7 @@
             <div class="row search-input">
                 <div class="col">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control search-bar" placeholder="Rechercher une recette"  aria-label="Recherche recette" aria-describedby="basic-addon2">
+                        <input type="text" id="search-input" class="form-control search-bar search-element" placeholder="Rechercher une recette"  aria-label="Recherche recette" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                         <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
                         </div>
@@ -33,48 +33,35 @@
                 </div>
             </div>
 
+            <div class="row choices-wrapper"></div>
+
             <div id="input_arguments" class="row inpoutz">
-                <!-- <div class="col-2 widz" id="col-ingredients">
+                <div class="col-2 widz" id="col-ingredients">
                     <div class="inpoute">
-                    <input class="bg-primary text-white input-elt" autocomplete="off" role="combobox" list="" id="inputingredients" name="dataingredients" placeholder="Ingrédients">
-                        <datalist id="dataingredients" role="listbox" class="browsers bg-primary text-white ">
-                            <option class="bg-primary text-white" value="Internet Explorer">Internet Explorer</option>
-                            <option class="bg-primary text-white" value="Chrome">Chrome</option>
-                            <option class="bg-primary text-white" value="Safari">Safari</option>
-                            <option class="bg-primary text-white" value="Microsoft Edge">Microsoft Edge</option>
-                            <option class="bg-primary text-white" value="Firefox">Firefox</option><option class="bg-primary text-white" value="Microsoft Edge">Microsoft Edge</option>
-                            <option class="bg-primary text-white" value="Firefox">Firefox</option><option class="bg-primary text-white" value="Microsoft Edge">Microsoft Edge</option>
+                    <input class="bg-primary text-white input-elt search-element" autocomplete="off" role="combobox" list="" id="inputingredients" name="dataingredients" placeholder="Ingrédients"><span class="chevron-input"><i class="bi chevron-ingredients bi-chevron-down"></i></span>
+                        <datalist id="dataingredientslist" role="listbox" class="browsers bg-primary text-white">
                         </datalist>
                     </div>
                 </div>
-
+        <div class="overlay"></div>
                 <div class="col-2 widz" id="col-appareils">
                     <div class="inpoute">
-                    <input  class="bg-success text-white input-elt" autocomplete="off" role="combobox" list="" id="inputappareil" name="dataappareil" placeholder="Appareils">
-                        <datalist id="dataappareil" role="listbox" class="browsers bg-success text-white  ">
-                            <option class="bg-success text-white" value="Internet Explorer">Internet Explorer</option>
-                            <option class="bg-success text-white" value="Chrome">Chrome</option>
-                            <option class="bg-success text-white" value="Safari">Safari</option>
-                            <option class="bg-success text-white" value="Microsoft Edge">Microsoft Edge</option>
-                            <option class="bg-success text-white" value="Firefox">Firefox</option><option class="bg-success text-white" value="Microsoft Edge">Microsoft Edge</option>
-                            <option class="bg-success text-white" value="Firefox">Firefox</option><option class="bg-success text-white" value="Microsoft Edge">Microsoft Edge</option>
+                    <input class="bg-success text-white input-elt search-element" autocomplete="off" role="combobox" list="" id="inputappareil" name="dataappareil" placeholder="Appareils"><span class="chevron-input">
+                        <i class="bi chevron-appliances bi-chevron-down"></i></span>
+                        <datalist id="dataappareilslist" role="listbox" class="browsers bg-success text-white ">
+                            <option class="truc" style="display: none;"></option>
                         </datalist>
                     </div>
                 </div>
-
+    <div class="overlay"></div>
                 <div class="col-2 widz" id="col-ustensiles">
                     <div class="inpoute">
-                    <input class="bg-danger text-white input-elt" autocomplete="off" role="combobox" list="" id="inputustensiles" name="dataustensiles" placeholder="Ustensiles">
-                        <datalist id="dataustensiles" role="listbox" class="browsers bg-danger text-white ">
-                            <option class="bg-danger text-white" value="Internet Explorer">Internet Explorer</option>
-                            <option class="bg-danger text-white" value="Chrome">Chrome</option>
-                            <option class="bg-danger text-white" value="Safari">Safari</option>
-                            <option class="bg-danger text-white" value="Microsoft Edge">Microsoft Edge</option>
-                            <option class="bg-danger text-white" value="Firefox">Firefox</option><option class="bg-danger text-white" value="Microsoft Edge">Microsoft Edge</option>
-                            <option class="bg-danger text-white" value="Firefox">Firefox</option><option class="bg-danger text-white" value="Microsoft Edge">Microsoft Edge</option>
+                    <input class="bg-danger text-white input-elt search-element" autocomplete="off" role="combobox" list="" id="inputustensiles" name="dataustensiles" placeholder="Ustensiles"><span class="chevron-input"><i class="bi chevron-ustensils bi-chevron-down"></i></span>
+                        <datalist id="dataustensileslist" role="listbox" class="browsers bg-danger text-white">
                         </datalist>
                     </div>
-                </div> -->
+                </div>
+    <div class="overlay"></div>
             </div>
 
 
@@ -95,7 +82,10 @@
 
         <!-- Templates -->
         <script src="scripts/templates/recetteCard.js"></script>
-        <script src="scripts/templates/inputArguments.js"></script>
+        <!-- <script src="scripts/templates/inputArguments.js"></script> -->
+        <script src="scripts/templates/filteredCard.js"></script>
+        <script src="scripts/templates/filteredTemplate.js"></script>
+
 
         <!-- Api -->
         <script src="scripts/api/Api.js"></script>
@@ -105,8 +95,13 @@
 
         <!-- Lib -->
         <!-- <script src="scripts/lib/search-element-v2.js"></script> -->
-        <script src="scripts/lib/search-element.js"></script>
+        <!-- <script src="scripts/lib/search-element.js"></script> -->
+        <script src="scripts/lib/filter.js"></script>
+        <script src="scripts/lib/filter-roller.js"></script>
+        <script src="scripts//lib/push-rollers-arg.js"></script>
 
+        <!-- Adapters -->
+        <script src="scripts/adapters/FilterAdapter.js"></script>
 
     </body>
 </html>

@@ -73,7 +73,7 @@
 
 // Input datalist
 #input_arguments{
-    position: absolute;
+    // position: absolute;
     z-index: 999;
 }
 
@@ -133,7 +133,8 @@ option:hover,  .active{
     font-size: 1.1em;
 }
 
-#overlay {
+#overlay, .overlay {
+    display: none;
     position:fixed;
     top:0;
     left:0;
@@ -188,4 +189,10 @@ option:hover,  .active{
     column-gap: 1rem;
     row-gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.hovered:hover{
+    pointer-events: none;
+
+    opacity: 0;
 }
