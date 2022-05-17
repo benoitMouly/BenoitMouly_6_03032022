@@ -16,19 +16,25 @@ class FilterForm {
 }
 
     async filterText(finalArray){
-        console.log(finalArray)
-        console.log(this.cursors)
+        // console.log(finalArray)
+        // console.log(this.cursors)
         this.clearMediasWrapper();
         this.cleanRollers();
 
 
         let AdaptedFilterLib = new FilterRecetteAdapter(this.recettes, finalArray, this.ingredientsData); // nouvel Adaptater
+        
+        
+        // const t0 = performance.now();
 
         let FilteredRecipeTitle = await AdaptedFilterLib.filterByWord(); // filterByWord est la fonction qui filtre les recettes
+        // const t1 = performance.now();
+        // console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 
         FilteredRecipeTitle.forEach(recette => {
             const template = new FilteredCard(recette);
             this.$RecettesHeader.appendChild(template.createRecetteCard());
+
         })
     }
 
