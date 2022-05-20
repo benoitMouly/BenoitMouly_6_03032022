@@ -9,7 +9,7 @@ class Filter {
 
     static async filterByWord(Recettes, recipeArray, Args){
         let recettes = Recettes
-        console.log(recettes)
+        // console.log(recettes)
 
         let filtered = [];
         let $header_section = document.querySelector('#recette_section');
