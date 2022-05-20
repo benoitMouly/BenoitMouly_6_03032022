@@ -136,7 +136,7 @@ class Filter {
                     }
                 } 
 
-               if(((!zeustensil.includes(recipe)) && (!zeingr.includes(recipe)) && (!appliance.includes(recipe)) && (!name.includes(recipe)) && (filtered.includes(recette)))){
+               if(((!zeustensil.includes(recipe)) && (!zeingr.includes(recipe)) && (!appliance.includes(recipe)) && (!name.includes(recipe)) && (!desc.includes(recipe)) && (filtered.includes(recette)))){
                     toggle = false;
                     // console.log('va passer en false ===')
                     // console.log(recipe + ' ===== ')
