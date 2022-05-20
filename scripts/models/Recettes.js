@@ -36,9 +36,11 @@ class Recette {
     get recipeIngredientsName() {
         return this._recipeIngredientsName
     }
+
     get recipeIngredientsQuantity() {
         return this._recipeIngredientsQuantity
     }
+    
     get recipeIngredientsUnit() {
         return this._recipeIngredientsUnit
     }

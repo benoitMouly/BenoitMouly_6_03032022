@@ -1,5 +1,5 @@
 class FilteredCard{
-
+// FilteredCard concerne les recettes après qu'elles soient filtrées. Elle
     constructor(recette) {
         this._recette = recette
         // console.log(recette)
@@ -35,7 +35,6 @@ class FilteredCard{
 
 
     /* 
-    ${this._recette.recipeIngredients.map(ingredientObj => this.addIngredient(ingredientObj)).join("")}
     ** On parcours le tableau des ingredient, l'indicatif est ingredientObj. Pour chaque indicatif, on fait passer la fonction addIngredient
     ** Qui rajoute le nom (ingredient), la quantité si il y a , et l'unité si il y a 
     */

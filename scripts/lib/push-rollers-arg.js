@@ -1,7 +1,7 @@
-// import this.recipes from '../data/data.js';
 class insertArgsRoller{
     constructor(recipes){
         this.recipes = recipes
+
     }
 
     insertArgs() {
@@ -9,14 +9,14 @@ class insertArgsRoller{
         let ingredients_arguments = [];
         let appareils_arguments = [];
         let ustensiles_arguments = [];
-        
         let ingredient_unique = null;
         let appareil_unique = null;
         let ustensile_unique = null;
         let opt = null;
-        let parent_ingredients = document.querySelector('#dataingredientslist');
-        let parent_appareils = document.querySelector('#dataappareilslist');
-        let parent_ustensiles = document.querySelector('#dataustensileslist');
+        let parent_ingredients = document.querySelector('.dataingredientslist_options');
+        let parent_appareils = document.querySelector('.dataappareilslist_options');
+        let parent_ustensiles = document.querySelector('.dataustensilslist_options');
+
         let overlay = document.createElement('div');
         overlay.setAttribute('id', 'overlay');                                                                                                                      // récupération des choix
 
@@ -103,7 +103,6 @@ class insertArgsRoller{
       }
 
 }
-//  export default rolling
 
 // console.log(appareils_arguments)
 // console.log(ingredients_arguments)

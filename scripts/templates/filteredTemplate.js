@@ -16,8 +16,8 @@ class FilterForm {
     }
 
         async filterText(finalArray){
-            console.log(finalArray)
-            console.log(this.cursors)
+            // console.log(finalArray)
+            // console.log(this.cursors)
             this.clearMediasWrapper();
             this.cleanRollers();
 

@@ -8,14 +8,16 @@ class Filter {
 
 
     static async filterByWord(Recettes, recipeArray, Args){
-
         let recettes = Recettes
+        console.log(recettes)
+
         let filtered = [];
         let $header_section = document.querySelector('#recette_section');
         let $elementError = document.createElement('div');
         let tour = 0;
         let appliance = '';
         let name = '';
+        let desc = '';
         let zeingr = '';
         let zeustensil = '';
         let toggle = null;
@@ -56,12 +58,9 @@ class Filter {
             app_rollerData.push(appliances_options[i].value)
         }
 
-
+        const t0 = performance.now();
         for(let t = 0; t < recipeArray.length; t++){
-            // console.log(tour)  // Pour chaque mots inputé
             const recipe = recipeArray[t]
-            // console.log('__________dans la premiere boucle')
-            // console.log(recipeArray[t])
             toggle = true;
 
 
@@ -72,6 +71,8 @@ class Filter {
                     name = recette.name
                     /* Récupération de l'appareil */
                     appliance = recette.appliance
+                    /* Récupération de la description */ 
+                    desc = recette.description
 
                     if((name.includes(recipe)) && (!filtered.includes(recette)) && (tour == 0)){              // on ajoute pu de recette comme le premier tri a été fait, donc un tour de boucle suffit
                         toggle = true
@@ -79,8 +80,15 @@ class Filter {
                     }
                     else if((name.includes(recipe)) && (filtered.includes(recette)) && (tour > 0)){
                         toggle = true; // On empêche les doublons en mettant seulement true, et en ne pushant pas
-                        console.log('on est la')
-                        console.log(name)
+                    }
+
+
+                    if((desc.includes(recipe)) && (!filtered.includes(recette)) && (tour == 0)){              // on ajoute pu de recette comme le premier tri a été fait, donc un tour de boucle suffit
+                        toggle = true
+                        filtered.push(recette)
+                    }
+                    else if((desc.includes(recipe)) && (filtered.includes(recette)) && (tour > 0)){
+                        toggle = true; // On empêche les doublons en mettant seulement true, et en ne pushant pas
                     }
                     
                     else if((appliance.includes(recipe)) && (!filtered.includes(recette)) && (tour == 0)){  
@@ -130,8 +138,8 @@ class Filter {
 
                if(((!zeustensil.includes(recipe)) && (!zeingr.includes(recipe)) && (!appliance.includes(recipe)) && (!name.includes(recipe)) && (filtered.includes(recette)))){
                     toggle = false;
-                    console.log('va passer en false ===')
-                    console.log(recipe + ' ===== ')
+                    // console.log('va passer en false ===')
+                    // console.log(recipe + ' ===== ')
                 }
 
                 if((toggle == false) && (filtered.includes(recette))){
@@ -147,18 +155,14 @@ class Filter {
             }    // Fin de la boucle pour UNE recette
 
             if(filtered.length == 0){
-                console.log('--- pas de recette ---')
-                console.log(filtered)
-                console.log('----')
+                // console.log('--- pas de recette ---')
+                // console.log(filtered)
+                // console.log('----')
                 $header_section.appendChild($elementError);
-                $elementError.innerHTML = 'Pas de recettes dispo'
+                $elementError.innerHTML = 'Pas de recettes disponibles ...'
             }
             tour ++;
         }  // Fin de la giga boucle
-        // console.log('/////////////////////////')
-        // console.log(filtered)
-        // console.log('//////////////////')
-
 
 /*
 * Récupération des différentes informations des éléments filtrés
@@ -166,7 +170,7 @@ class Filter {
 
         for(let i = 0; i < filtered.length; i++){ // FROM les éléments filtrés.
             const filtered_unique = filtered[i];
-            console.log(filtered_unique)
+            // console.log(filtered_unique)
 
             for(let a = 0; a < filtered_unique.ingredients.length; a++){ 
                 ingr_arr.push(filtered_unique.ingredients[a].ingredient);
@@ -184,7 +188,6 @@ class Filter {
         
 
 
-/* Pourquoi pas faire une fonction ce truc de suppression, le système qui contient le console .log de DEGAGE */
 /*
 * Gestion des éléments dans les rollers
 */
@@ -267,12 +270,13 @@ class Filter {
             }
 
         if ((!recipeArray) || (!filtered)) {
-            console.log(filtered)
+            // console.log(filtered)
             return recettes
         }
 
         // console.log(filtered)
-
+        const t1 = performance.now();
+        console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
         return filtered   // return le tableau filtered 
     }  // Fin de la fonction
 }

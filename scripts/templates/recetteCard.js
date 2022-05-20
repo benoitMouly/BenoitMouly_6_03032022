@@ -1,5 +1,5 @@
 class RecetteCard{
-
+// RecetteCard concerne les recettes de bases, quand elles sont instancié au chargement de la page
     constructor(recette) {
         this._recette = recette
         this.$wrapper = document.createElement('div')
@@ -34,7 +34,6 @@ class RecetteCard{
 
 
     /* 
-    ${this._recette.recipeIngredients.map(ingredientObj => this.addIngredient(ingredientObj)).join("")}
     ** On parcours le tableau des ingredient, l'indicatif est ingredientObj. Pour chaque indicatif, on fait passer la fonction addIngredient
     ** Qui rajoute le nom (ingredient), la quantité si il y a , et l'unité si il y a 
     */

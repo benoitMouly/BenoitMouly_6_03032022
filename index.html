@@ -34,12 +34,14 @@
             </div>
 
             <div class="row choices-wrapper"></div>
-
             <div id="input_arguments" class="row inpoutz">
                 <div class="col-2 widz" id="col-ingredients">
                     <div class="inpoute">
                     <input class="bg-primary text-white input-elt search-element" autocomplete="off" role="combobox" list="" id="inputingredients" name="dataingredients" placeholder="Ingrédients"><span class="chevron-input"><i class="bi chevron-ingredients bi-chevron-down"></i></span>
                         <datalist id="dataingredientslist" role="listbox" class="browsers bg-primary text-white">
+                            <div class="gr dataingredientslist_options">
+
+                            </div>
                         </datalist>
                     </div>
                 </div>
@@ -49,7 +51,9 @@
                     <input class="bg-success text-white input-elt search-element" autocomplete="off" role="combobox" list="" id="inputappareil" name="dataappareil" placeholder="Appareils"><span class="chevron-input">
                         <i class="bi chevron-appliances bi-chevron-down"></i></span>
                         <datalist id="dataappareilslist" role="listbox" class="browsers bg-success text-white ">
-                            <option class="truc" style="display: none;"></option>
+                            <div class="gr dataappareilslist_options">
+
+                            </div>
                         </datalist>
                     </div>
                 </div>
@@ -58,6 +62,9 @@
                     <div class="inpoute">
                     <input class="bg-danger text-white input-elt search-element" autocomplete="off" role="combobox" list="" id="inputustensiles" name="dataustensiles" placeholder="Ustensiles"><span class="chevron-input"><i class="bi chevron-ustensils bi-chevron-down"></i></span>
                         <datalist id="dataustensileslist" role="listbox" class="browsers bg-danger text-white">
+                            <div class="gr dataustensilslist_options">
+
+                            </div>
                         </datalist>
                     </div>
                 </div>
@@ -72,9 +79,6 @@
 
         </div>
         
-        <!-- Datas -->
-        <!-- <script src="scripts/data/data.js"></script> -->
-
 
         <!-- Models -->
         <script src="scripts/models/Recettes.js"></script>
@@ -82,7 +86,6 @@
 
         <!-- Templates -->
         <script src="scripts/templates/recetteCard.js"></script>
-        <!-- <script src="scripts/templates/inputArguments.js"></script> -->
         <script src="scripts/templates/filteredCard.js"></script>
         <script src="scripts/templates/filteredTemplate.js"></script>
 
@@ -94,8 +97,6 @@
         <script src="scripts/App.js" type="module"></script>
 
         <!-- Lib -->
-        <!-- <script src="scripts/lib/search-element-v2.js"></script> -->
-        <!-- <script src="scripts/lib/search-element.js"></script> -->
         <script src="scripts/lib/filter.js"></script>
         <script src="scripts/lib/filter-roller.js"></script>
         <script src="scripts//lib/push-rollers-arg.js"></script>
