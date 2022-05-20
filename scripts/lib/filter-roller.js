@@ -1,168 +1,13 @@
-// import this.recipes from '../data/data.js';
 class FilterInput{
     constructor(recipes){
         this.recipes = recipes
-        // let option_choice = []
-        // let option_choice = []
-        /* Création/récupération des elements permettant d'intégrer les choix */
-
-        // $choicesWrapper.classList.add('row', 'choices-wrapper');
-        // $searchInput.parentNode.insertBefore($choicesWrapper, $inputArguments);
-
-                                                                                                                                                            // console.log(this.recipes)
-
-
-// let rolling = document.querySelectorAll('.input-elt');
-
-// console.log(rolling)
-
-// for( let i = 0; i < rolling.length; i++){
-//     rolling[i].addEventListener('click', function(rolling){
-//         this.selectValue(rolling, option_choice);
-//     })
-// }
     }
-//   async tg(option_choice){
 
-// /* Création/récupération des elements permettant d'intégrer les choix */
-// let $searchInput = document.querySelector('.search-input');
-// let $inputArguments = document.querySelector('#input_arguments')
-// let $choicesWrapper = document.querySelector('.choices-wrapper');
-// // $choicesWrapper.classList.add('row', 'choices-wrapper');
-// // $searchInput.parentNode.insertBefore($choicesWrapper, $inputArguments);
-
-//                                                                                                                                                     // console.log(this.recipes)
-// option_choice = [];
-// let ingredients_arguments = [];
-// let appareils_arguments = [];
-// let ustensiles_arguments = [];
-// let ingredient_unique = null;
-// let appareil_unique = null;
-// let ustensile_unique = null;
-// let opt = null;
-// let parent_ingredients = document.querySelector('#dataingredientslist');
-// let parent_appareils = document.querySelector('#dataappareilslist');
-// let parent_ustensiles = document.querySelector('#dataustensileslist');
-// let overlay = document.createElement('div');
-// overlay.setAttribute('id', 'overlay');                                                                                                                      // récupération des choix
-// let inputingredient = document.querySelector('#inputingredients');
-// let inputappareil = document.querySelector('#inputappareil')
-
-// for(let i = 0; i < this.recipes.length; i++){                                                                                            // On push dans les différents tableaux
-//     let recipe = this.recipes[i];
-//     appareils_arguments.push(recipe.appliance)
-//     for(let a = 0; a < recipe.ingredients.length; a++){
-//         ingredients_arguments.push(recipe.ingredients[a].ingredient)
-//     }
-//     for(let b = 0; b < recipe.ustensils.length; b++){
-//         ustensiles_arguments.push(recipe.ustensils[b])
-//     }
-// }
-
-
-// for(let c = 0; c < ingredients_arguments.length; c++){
-//     ingredient_unique = ingredients_arguments[c]
-//     opt = document.createElement('option')
-//     opt.setAttribute('class', 'bg-primary text-white')
-//     opt.setAttribute('value', ingredient_unique)
-//     opt.innerHTML = ingredient_unique;
-//     parent_ingredients.appendChild(opt);
-
-// }
-
-// for(let d = 0; d < appareils_arguments.length; d++){
-//     appareil_unique = appareils_arguments[d]
-//     opt = document.createElement('option')
-//     opt.setAttribute('class', 'bg-success text-white')
-//     opt.setAttribute('value', appareil_unique)
-//     opt.innerHTML = appareil_unique;
-//     parent_appareils.appendChild(opt);
-
-// }
-
-// for(let e = 0; e < ustensiles_arguments.length; e++){
-//     ustensile_unique = ustensiles_arguments[e]
-//     opt = document.createElement('option')
-//     opt.setAttribute('class', 'bg-danger text-white')
-//     opt.setAttribute('value', ustensile_unique)
-//     opt.innerHTML = ustensile_unique;
-//     parent_ustensiles.appendChild(opt);
-
-// }
-
-// let rolling = document.querySelectorAll('.input-elt');
-
-// for( let i = 0; i < rolling.length; i++){
-//     rolling[i].addEventListener('click', function(rolling){
-//         selectValue(rolling, option_choice);
-//     })
-// }
 
 selectValue(rolling, option_choice, cursor) {
 
     let $choicesWrapper = document.querySelector('.choices-wrapper');
-    // let ingredients_arguments = [];
-    // let appareils_arguments = [];
-    // let ustensiles_arguments = [];
-    // let ingredient_unique = null;
-    // let appareil_unique = null;
-    // let ustensile_unique = null;
-    // let opt = null;
-    // let parent_ingredients = document.querySelector('#dataingredientslist');
-    // let parent_appareils = document.querySelector('#dataappareilslist');
-    // let parent_ustensiles = document.querySelector('#dataustensileslist');
-    
     let overlay = document.querySelector('.overlay')
-    // let option_choice = []
-    // let overlay = document.createElement('div');
-    // overlay.setAttribute('id', 'overlay');                                                                                                                      // récupération des choix
-
-    // for(let i = 0; i < this.recipes.length; i++){                                                                                            // On push dans les différents tableaux
-    //     let recipe = this.recipes[i];
-    //     appareils_arguments.push(recipe.appliance)
-
-    //     for(let a = 0; a < recipe.ingredients.length; a++){
-    //         ingredients_arguments.push(recipe.ingredients[a].ingredient)
-
-    //     }
-    //     for(let b = 0; b < recipe.ustensils.length; b++){
-    //         ustensiles_arguments.push(recipe.ustensils[b])
-
-    //     }
-    // }
-
-
-
-
-    // for(let c = 0; c < ingredients_arguments.length; c++){
-    //     ingredient_unique = ingredients_arguments[c]
-    //     opt = document.createElement('option')
-    //     opt.setAttribute('class', 'bg-primary text-white')
-    //     opt.setAttribute('value', ingredient_unique)
-    //     opt.innerHTML = ingredient_unique;
-    //     parent_ingredients.appendChild(opt);
-
-    // }
-
-    // for(let d = 0; d < appareils_arguments.length; d++){
-    //     appareil_unique = appareils_arguments[d]
-    //     opt = document.createElement('option')
-    //     opt.setAttribute('class', 'bg-success text-white')
-    //     opt.setAttribute('value', appareil_unique)
-    //     opt.innerHTML = appareil_unique;
-    //     parent_appareils.appendChild(opt);
-
-    // }
-
-    // for(let e = 0; e < ustensiles_arguments.length; e++){
-    //     ustensile_unique = ustensiles_arguments[e]
-    //     opt = document.createElement('option')
-    //     opt.setAttribute('class', 'bg-danger text-white')
-    //     opt.setAttribute('value', ustensile_unique)
-    //     opt.innerHTML = ustensile_unique;
-    //     parent_ustensiles.appendChild(opt);
-
-    // }
         // console.log(option_choice)
         rolling.stopImmediatePropagation();
         rolling = rolling.target
@@ -190,7 +35,6 @@ selectValue(rolling, option_choice, cursor) {
             option.onclick = function (e) {
             rolling.value = option.value;
             option_choice.push(option.value);
-            // e.preventDefault();
             pushIngredients(rolling.value);
             rolling.value = null // On masque le value de l'input 
             console.log(option_choice)
@@ -240,7 +84,7 @@ selectValue(rolling, option_choice, cursor) {
             else if (e.keyCode == 13) {
                 e.preventDefault();
                 if (currentFocus > -1) {
-                    /*and simulate a click on the "active" item:*/
+                    // Et on simule le click sur l'item active
                     if (datalist.options)
                         datalist.options[currentFocus].click();
                 }
@@ -251,13 +95,19 @@ selectValue(rolling, option_choice, cursor) {
         function pushIngredients(opted) {
             
             let eltChoose = document.createElement('div');
-            eltChoose.classList.add('elt-choose', 'col-2');
+            if(datalist.id === 'dataappareilslist'){
+                eltChoose.classList.add('elt-choose', 'col-2', 'bg-success');
+            } 
+            else if(datalist.id === 'dataustensileslist'){
+            eltChoose.classList.add('elt-choose', 'col-2', 'bg-danger');
+            } else if(datalist.id === 'dataingredientslist'){
+                eltChoose.classList.add('elt-choose', 'col-2', 'bg-primary');
+            }
             $choicesWrapper.appendChild(eltChoose);
             eltChoose.innerHTML = `<p class="opted">${opted}</p> <i class="bi bi-x-circle supp-choose option-elt search-element"></i> `;
             let supp_choose = document.querySelectorAll('.supp-choose');
            cursor = document.querySelector('.hovered')
            console.log(cursor)
-            // return
             // console.log(option_choice + ' ----------------------------- ');
             // console.log(opted + ' poucheingredient');
 
@@ -290,9 +140,7 @@ selectValue(rolling, option_choice, cursor) {
         }
 
     }
-// }
 }
-//  export default rolling
 
 // console.log(appareils_arguments)
 // console.log(ingredients_arguments)

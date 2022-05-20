@@ -16,6 +16,7 @@ class Filter {
         let tour = 0;
         let appliance = '';
         let name = '';
+        let desc = '';
         let zeingr = '';
         let zeustensil = '';
         let toggle = null;
@@ -26,7 +27,7 @@ class Filter {
         let ust_arr = [];
         let appliance_arr = [];
         let ingredients_options = document.getElementById('dataingredientslist').options;
-        // console.log(ingredients_options)
+        console.log(ingredients_options)
         let ustensils_options = document.getElementById('dataustensileslist').options;
         let appliances_options = document.getElementById('dataappareilslist').options;
 
@@ -72,12 +73,22 @@ class Filter {
                     name = recette.name
                     /* Récupération de l'appareil */
                     appliance = recette.appliance
+                    /* Récupération de la description */
+                    desc = recette.description
 
                     if((name.includes(recipe)) && (!filtered.includes(recette)) && (tour == 0)){              // on ajoute pu de recette comme le premier tri a été fait, donc un tour de boucle suffit
                         toggle = true
                         filtered.push(recette)
                     }
                     else if((name.includes(recipe)) && (filtered.includes(recette)) && (tour > 0)){
+                        toggle = true; // On empêche les doublons en mettant seulement true, et en ne pushant pas
+                    }
+
+                    else if((desc.includes(recipe)) && (!filtered.includes(recette)) && (tour == 0)){              // on ajoute pu de recette comme le premier tri a été fait, donc un tour de boucle suffit
+                        toggle = true
+                        filtered.push(recette)
+                    }
+                    else if((desc.includes(recipe)) && (filtered.includes(recette)) && (tour > 0)){
                         toggle = true; // On empêche les doublons en mettant seulement true, et en ne pushant pas
                     }
                     
@@ -124,7 +135,7 @@ class Filter {
                     }
             )} 
 
-               if(((!zeustensil.includes(recipe)) && (!zeingr.includes(recipe)) && (!appliance.includes(recipe)) && (!name.includes(recipe)) && (filtered.includes(recette)))){
+               if(((!zeustensil.includes(recipe)) && (!zeingr.includes(recipe)) && (!appliance.includes(recipe)) && (!name.includes(recipe)) && (!desc.includes(recipe)) && (filtered.includes(recette)))){
                     toggle = false;
                     // console.log('va passer en false ===')
                     // console.log(recipe + ' ===== ')
