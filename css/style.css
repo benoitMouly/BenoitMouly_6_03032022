@@ -5,6 +5,10 @@
   height: 100px;
 }
 
+.bg-primary {
+  background-color: #3282F7 !important;
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -7653,7 +7657,9 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  /* background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important; */
+  background-color: #3282F7 !important;
+  ;
 }
 
 .bg-secondary {
@@ -7663,7 +7669,8 @@ textarea.form-control-lg {
 
 .bg-success {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+  /* background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important; */
+  background-color: #68D9A4 !important;
 }
 
 .bg-info {
@@ -7678,7 +7685,8 @@ textarea.form-control-lg {
 
 .bg-danger {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+  /* background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important; */
+  background-color: #ED6454 !important;
 }
 
 .bg-light {
@@ -11133,6 +11141,11 @@ textarea.form-control-lg {
 .search-bar {
   background: #e9ecef;
   border-right: none;
+  height: 40px;
+}
+
+.input-group-text {
+  height: 40px;
 }
 
 .card {
@@ -11195,7 +11208,6 @@ textarea.form-control-lg {
 }
 
 #input_arguments {
-  position: absolute;
   z-index: 999;
 }
 
@@ -11208,7 +11220,6 @@ input {
   outline: none;
   border-radius: 5px;
   color: blue;
-  /*   border-bottom: none; */
 }
 
 datalist {
@@ -11220,13 +11231,14 @@ datalist {
   font-family: sans-serif;
   width: 350px;
   padding: 15px;
-  max-height: 10rem;
+  max-height: 20rem;
   overflow-y: auto;
 }
 
 .browsers {
   z-index: 999;
   width: 100%;
+  height: 100%;
 }
 
 option {
@@ -11236,10 +11248,6 @@ option {
   margin-bottom: 1px;
   font-size: 18px;
   cursor: pointer;
-}
-
-option:hover, .active {
-  background-color: lightblue;
 }
 
 .inpoute {
@@ -11252,7 +11260,8 @@ option:hover, .active {
   font-size: 1.1em;
 }
 
-#overlay {
+#overlay, .overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -11304,6 +11313,17 @@ option:hover, .active {
   column-gap: 1rem;
   row-gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.hovered:hover {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.gr {
+  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -30,7 +30,7 @@
         "time": 10,
         "description": "Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée",
         "appliance": "Blender",
-        "ustensils": ["cuillère à Soupe", "verres", "presse citron" ]
+        "ustensils": ["cuillère à Soupe", "presse citron", "verres" ]
     },
     {
         "id": 2,
@@ -142,6 +142,82 @@
         "description": "Faire cuire le riz. Une fois le riz cuit, le laisser refroidir. Couper les oeufs dur en quarts ou en lamelle au choix, coupez le tomates en dés, ajouter au riz les oeufs, les tomates, le poisson, le maïs et la vinaigrette. Ajouter au gout de chacun des corniches, olives etc..",
         "appliance": "Cuiseur de riz",
         "ustensils": ["saladier", "passoire"]
+    },
+    {
+        "id": 4888,
+        "name": "Salade de test",
+        "servings": 4,
+        "ingredients":[
+            {
+                "ingredient": "Riz blanc",
+                "quantity": 500,
+                "unit": "grammes"
+            },
+            {
+                "ingredient": "Thon en miettes",
+                "quantity": 200,
+                "unit": "grammes"
+            },{
+                "ingredient": "Tomate",
+                "quantity": 2
+            },
+            {
+                "ingredient": "Oeuf dur",
+                "quantity": 2
+            },
+            {
+                "ingredient": "Maïs",
+                "quantity": 300,
+                "unit": "grammes"
+            },
+            {
+                "ingredient": "Vinaigrette",
+                "quantity": 5,
+                "unit": "cl"
+            }
+        ],
+        "time": 50,
+        "description": "Faire cuire le riz. Une fois le riz cuit, le laisser refroidir. Couper les oeufs dur en quarts ou en lamelle au choix, coupez le tomates en dés, ajouter au riz les oeufs, les tomates, le poisson, le maïs et la vinaigrette. Ajouter au gout de chacun des corniches, olives etc..",
+        "appliance": "Cuiseur de riz",
+        "ustensils": ["passoire", "teubis", "saladier"]
+    },
+    {
+        "id": 4888,
+        "name": "Salade de test2",
+        "servings": 4,
+        "ingredients":[
+            {
+                "ingredient": "Riz blanc",
+                "quantity": 500,
+                "unit": "grammes"
+            },
+            {
+                "ingredient": "Thon en miettes",
+                "quantity": 200,
+                "unit": "grammes"
+            },{
+                "ingredient": "Tomate",
+                "quantity": 2
+            },
+            {
+                "ingredient": "Oeuf dur",
+                "quantity": 2
+            },
+            {
+                "ingredient": "Maïs",
+                "quantity": 300,
+                "unit": "grammes"
+            },
+            {
+                "ingredient": "Vinaigrette",
+                "quantity": 5,
+                "unit": "cl"
+            }
+        ],
+        "time": 50,
+        "description": "Faire cuire le riz. Une fois le riz cuit, le laisser refroidir. Couper les oeufs dur en quarts ou en lamelle au choix, coupez le tomates en dés, ajouter au riz les oeufs, les tomates, le poisson, le maïs et la vinaigrette. Ajouter au gout de chacun des corniches, olives etc..",
+        "appliance": "Cuiseur de riz",
+        "ustensils": ["saladier", "teubis", "passoire"]
     },
     {
         "id": 5,
@@ -1547,7 +1623,7 @@
         "time": 30,
         "description":"Faire bouillir le lait ( on peut y ajouter de l'essence de vanille. Battre les oeufs et le sucre, ajouter la farine puis finalement ajouter le lait chaud. Remettre à feu doux pour faire épaissir en remuant pendant 5 à 10 minutes.",
         "appliance": "Casserolle",
-        "ustensils":["fouet","saladier"]
+        "ustensils":["saladier", "fouet"]
     },
     {
         "id": 46,
