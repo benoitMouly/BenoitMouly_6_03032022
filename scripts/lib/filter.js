@@ -158,7 +158,7 @@ class Filter {
                 // console.log(filtered)
                 // console.log('----')
                 $header_section.appendChild($elementError);
-                $elementError.innerHTML = 'Pas de recettes dispo'
+                $elementError.innerHTML = 'Pas de recettes disponibles ...'
             }
             tour ++;
 
