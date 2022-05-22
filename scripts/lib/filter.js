@@ -27,7 +27,7 @@ class Filter {
         let ust_arr = [];
         let appliance_arr = [];
         let ingredients_options = document.getElementById('dataingredientslist').options;
-        console.log(ingredients_options)
+        // console.log(ingredients_options)
         let ustensils_options = document.getElementById('dataustensileslist').options;
         let appliances_options = document.getElementById('dataappareilslist').options;
 
