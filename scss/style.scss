@@ -196,3 +196,22 @@ option {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.bg-primary{
+    background-color: #3282F7 !important;
+}
+
+.bg-danger{
+    background-color: #ED6454 !important;
+}
+
+.bg-success{
+    background-color: #68D9A4 !important;
+}

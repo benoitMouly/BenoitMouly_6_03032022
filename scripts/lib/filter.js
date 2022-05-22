@@ -23,11 +23,12 @@ class Filter {
         let ingredient_rollerData = [];
         let app_rollerData = [];
         let ust_rollerData = [];
+        let title_arr = [];
         let ingr_arr = [];
         let ust_arr = [];
+        let desc_arr = [];
         let appliance_arr = [];
         let ingredients_options = document.getElementById('dataingredientslist').options;
-        // console.log(ingredients_options)
         let ustensils_options = document.getElementById('dataustensileslist').options;
         let appliances_options = document.getElementById('dataappareilslist').options;
 
@@ -177,37 +178,104 @@ filtered.forEach((filtered_unical) => {
 
             for(let a = 0; a < filtered_unique.ingredients.length; a++){ 
                 ingr_arr.push(filtered_unique.ingredients[a].ingredient);
-                // console.log(ingr_arr)
             }
+            console.log(ingr_arr)
+
             for(let a = 0; a < filtered_unique.ustensils.length; a++){
                 ust_arr.push(filtered_unique.ustensils[a]);
                 // console.log(ust_arr)
             }
                 appliance_arr.push(filtered_unique.appliance);
+                title_arr.push(filtered_unique.name)
+                desc_arr.push(filtered_unique.description)
+                // console.log(desc_arr)
+
                 // console.log(appliance_arr)
 
 
         })
+
         
 
 /*
 * Gestion des éléments dans les rollers
 */
+// ingredient_rollerData.forEach((ingredient_rollerData_unical) => {
+
+//     let name = ingredient_rollerData_unical // est égal aux datas innerHTML
+//     let optioneed = ingredients_options
+//     console.log(ingr_arr)
+//     Array.from(optioneed).forEach((optioneed_unique) => { 
+//     // let optioneed_unique = optioneed // est égal aux data de TYPE html
+//     if(title_arr.includes(name)){
+//         optioneed_unique.style.display = 'block';
+//     }
+//     else if(!title_arr.includes(name) && filtered.length > 0){
+//             var p =0;
+//             while (p < optioneed.length) {
+//                 if (optioneed_unique.value === name) {
+//                     optioneed_unique.style.display = 'none';
+//                 } 
+//                 else {
+//                     ++p;
+//                 }
+//             break
+
+//             }
+//         }
+//     })
+// })
+
+// ingredient_rollerData.forEach((ingredient_rollerData_unical) => {
+
+//     let desc = ingredient_rollerData_unical // est égal aux datas innerHTML
+//     let optioneed = ingredients_options
+//     Array.from(optioneed).forEach((optioneed_unique) => { 
+//     // let optioneed_unique = optioneed // est égal aux data de TYPE html
+//     if(desc_arr.includes(desc)){
+//         optioneed_unique.style.display = 'block';
+//     }
+//     else if(!desc_arr.includes(desc) && filtered.length > 0){
+//             var p =0;
+//             while (p < optioneed.length) {
+//                 if (optioneed_unique.value === desc) {
+//                     optioneed_unique.style.display = 'none';
+//                 } 
+//                 else {
+//                     ++p;
+//                 }
+//             break
+
+//             }
+//         }
+//     })
+// })
 
 ingredient_rollerData.forEach((ingredient_rollerData_unical) => {
 
                 let Zutat = ingredient_rollerData_unical // est égal aux datas innerHTML
-                let optioneed = ingredients_options
-                Array.from(optioneed).forEach((optioneed_unique) => { 
+                let optioned_ingredients = ingredients_options
+            //    console.log(filtered.length)
+
+                Array.from(optioned_ingredients).forEach((optioned_ingredients_unique) => { 
+ 
                 // let optioneed_unique = optioneed // est égal aux data de TYPE html
                 if(ingr_arr.includes(Zutat)){
-                    optioneed_unique.style.display = 'block';
+                    optioned_ingredients_unique.style.display = 'block';
+                    // continue
+                    // return true
+                    // console.log('OUGGSS')
+                    // console.log('TAMEERR')
+                    // console.log(optioneed_ingredients_unique)
                 }
                 else if(!ingr_arr.includes(Zutat) && filtered.length > 0){
-                        var p =0;
-                        while (p < optioneed.length) {
-                            if (optioneed_unique.value === Zutat) {
-                                optioneed_unique.style.display = 'none';
+                    // console.log('NON')
+                        let p =0;
+                        while (p < optioned_ingredients.length) {
+                            if (optioned_ingredients_unique.value === Zutat) {
+                                // console.log(optioned_ingredients_unique)
+                                optioned_ingredients_unique.style.display = 'none';
+                                // console.log(optioned_ingredients_unique)
                             } 
                             else {
                                 ++p;
@@ -218,33 +286,58 @@ ingredient_rollerData.forEach((ingredient_rollerData_unical) => {
                     }
                 })
             })
+
+
+
+/****************************************************************************************************************************************** */
+
+
 
             app_rollerData.forEach((app_rollerData_unical) => {
 
                 let Gerate = app_rollerData_unical // est égal aux datas innerHTML
                 let optioned_appliance = appliances_options 
-                Array.from(optioned_appliance).forEach((optioned_appliance_unique) => {
-                // let optioned_appliance_unique = optioned_appliance[i] // est égal aux data de TYPE html
 
+                Array.from(optioned_appliance).forEach((optioned_appliance_unique) => {
                 if(appliance_arr.includes(Gerate)){
                     optioned_appliance_unique.style.display = 'block';
-                    // console.log(optioned_appliance_unique)
+
                 }
                 else if(!appliance_arr.includes(Gerate) && filtered.length > 0){
                         var p =0;
-                        while (p < optioned_appliance.length) {
-                            if (optioned_appliance_unique.value === Gerate) {
-                                optioned_appliance_unique.style.display = 'none';
-                            } 
-                            else {
-                                ++p;
+                        // while (p < optioned_appliance.length) {
+                            // if (optioned_appliance_unique.value === Gerate) {
+                                console.log(optioned_appliance_unique)
+                                // optioned_appliance_unique.style.display = 'none';
+                            // } 
+                            
+                            for(let i = 0; i < optioned_appliance.length; i++){
+                                if(optioned_appliance[i] === Gerate){
+                                optioned_appliance[i].style.display = 'none';
+                                }
                             }
-                        break
+                        //     else {
+                        //         ++p;
+                        //         // break
+                        //     }
+                        // break
 
-                        }
+                        // }
                     }
                 })
             })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             ust_rollerData.forEach((ust_rollerData_unical) => {

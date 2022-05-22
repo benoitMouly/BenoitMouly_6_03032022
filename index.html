@@ -37,35 +37,38 @@
             <div id="input_arguments" class="row inpoutz">
                 <div class="col-2 widz" id="col-ingredients">
                     <div class="inpoute">
-                    <input class="bg-primary text-white input-elt search-element" aria-expanded="false"  autocomplete="off" role="combobox" list="inputingredients" id="inputingredients" name="dataingredients" placeholder="Ingrédients"><span class="chevron-input"><i class="bi chevron-ingredients bi-chevron-down"></i></span>
-                        <datalist id="dataingredientslist" role="listbox" class="browsers bg-primary text-white">
+                    <input class="bg-primary text-white input-elt search-element" type="search"  autocomplete="off"  list="bypassdatalist1" id="inputingredients" name="dataingredients" placeholder="Ingrédients"><span class="chevron-input"><i class="bi chevron-ingredients bi-chevron-down"></i></span>      
+                    <datalist id="dataingredientslist"  class="browsers bg-primary text-white">
                             <span class="gr dataingredientslist_options">
 
                             </span>
-                        </datalist>
+                    </datalist>
+                    <datalist id="bypassdatalist1" style="display : none"></datalist>  
                     </div>
                 </div>
         <div class="overlay"></div>
                 <div class="col-2 widz" id="col-appareils">
                     <div class="inpoute">
-                    <input class="bg-success text-white input-elt search-element" autocomplete="off" aria-expanded="false" role="combobox" list="inputappareil" id="inputappareil" name="dataappareil" placeholder="Appareils"><span class="chevron-input">
+                    <input class="bg-success text-white input-elt search-element" type="search" autocomplete="off"   list="bypassdatalist2" id="inputappareil" name="dataappareil" placeholder="Appareils"><span class="chevron-input">
                         <i class="bi chevron-appliances bi-chevron-down"></i></span>
-                        <datalist id="dataappareilslist" role="listbox" class="browsers bg-success text-white ">
+                        <datalist id="dataappareilslist"  class="browsers bg-success text-white ">
                             <span class="gr dataappareilslist_options">
 
                             </span>
                         </datalist>
+                        <datalist id="bypassdatalist2" style="display : none"></datalist>    
                     </div>
                 </div>
     <div class="overlay"></div>
                 <div class="col-2 widz" id="col-ustensiles">
                     <div class="inpoute">
-                    <input class="bg-danger text-white input-elt search-element" autocomplete="off" aria-expanded="false" role="combobox" list="inputustensiles" id="inputustensiles" name="dataustensiles" placeholder="Ustensiles"><span class="chevron-input"><i class="bi chevron-ustensils bi-chevron-down"></i></span>
-                        <datalist id="dataustensileslist" role="listbox" class="browsers bg-danger text-white">
+                    <input class="bg-danger text-white input-elt search-element" type="search" autocomplete="off"   list="bypassdatalist3" id="inputustensiles" name="dataustensiles" placeholder="Ustensiles"><span class="chevron-input"><i class="bi chevron-ustensils bi-chevron-down"></i></span>
+                    <datalist id="dataustensileslist"  class="browsers bg-danger text-white">
                             <span class="gr dataustensilslist_options">
 
                             </span>
-                        </datalist>
+                    </datalist>
+                    <datalist id="bypassdatalist3" style="display : none"></datalist>    
                     </div>
                 </div>
     <div class="overlay"></div>

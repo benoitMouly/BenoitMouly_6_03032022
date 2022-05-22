@@ -47,7 +47,7 @@ selectValue(rolling, option_choice, cursor) {
             chevron.classList.remove('bi-chevron-up');
             overlay.style.display = 'none';
             main_parent.style.zIndex = '9';
-            ariaz = rolling.setAttribute('aria-expanded', 'false') // On remet l'aria expanded en false comme il se ferme
+            ariaz = rolling.removeAttribute('aria-expanded', 'true') // On remet l'aria expanded en false comme il se ferme
 
 
         }
@@ -70,7 +70,7 @@ selectValue(rolling, option_choice, cursor) {
 
         let currentFocus = -1;
         rolling.onkeydown = function (e) {
-            console.log(datalist.options.length)
+            // console.log(datalist.options.length)
             for (let i = 0; i < datalist.options.length; i++){
                 let options = datalist.options[i];
                 // console.log(options)
@@ -78,12 +78,12 @@ selectValue(rolling, option_choice, cursor) {
 
             if (e.keyCode == 40) {
                 currentFocus++;
-                addActive(datalist.options);
-                console.log(datalist.options)
+                // addActive(datalist.options);
+                // console.log(datalist.options)
             }
             else if (e.keyCode == 38) {
                 currentFocus--;
-                addActive(datalist.options);
+                // addActive(datalist.options);
             }
             else if (e.keyCode == 13) {
                 e.preventDefault();
@@ -111,7 +111,7 @@ selectValue(rolling, option_choice, cursor) {
             eltChoose.innerHTML = `<p class="opted">${opted}</p> <i class="bi bi-x-circle supp-choose option-elt search-element"></i> `;
             let supp_choose = document.querySelectorAll('.supp-choose');
            cursor = document.querySelector('.hovered')
-           console.log(cursor)
+        //    console.log(cursor)
             // console.log(option_choice + ' ----------------------------- ');
             // console.log(opted + ' poucheingredient');
 
