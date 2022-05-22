@@ -251,31 +251,20 @@ filtered.forEach((filtered_unical) => {
 //     })
 // })
 
-ingredient_rollerData.forEach((ingredient_rollerData_unical) => {
+ingredient_rollerData.forEach((ingredient_rollerData_unical, i) => {
 
                 let Zutat = ingredient_rollerData_unical // est égal aux datas innerHTML
                 let optioned_ingredients = ingredients_options
-            //    console.log(filtered.length)
+                let optioned_ingredients_unique = optioned_ingredients[i] // est égal aux data de TYPE html
 
-                Array.from(optioned_ingredients).forEach((optioned_ingredients_unique) => { 
- 
-                // let optioneed_unique = optioneed // est égal aux data de TYPE html
                 if(ingr_arr.includes(Zutat)){
                     optioned_ingredients_unique.style.display = 'block';
-                    // continue
-                    // return true
-                    // console.log('OUGGSS')
-                    // console.log('TAMEERR')
-                    // console.log(optioneed_ingredients_unique)
                 }
                 else if(!ingr_arr.includes(Zutat) && filtered.length > 0){
-                    // console.log('NON')
                         let p =0;
                         while (p < optioned_ingredients.length) {
                             if (optioned_ingredients_unique.value === Zutat) {
-                                // console.log(optioned_ingredients_unique)
                                 optioned_ingredients_unique.style.display = 'none';
-                                // console.log(optioned_ingredients_unique)
                             } 
                             else {
                                 ++p;
@@ -284,74 +273,45 @@ ingredient_rollerData.forEach((ingredient_rollerData_unical) => {
 
                         }
                     }
-                })
             })
 
-
-
-/****************************************************************************************************************************************** */
-
-
-
-            app_rollerData.forEach((app_rollerData_unical) => {
+            app_rollerData.forEach((app_rollerData_unical, i) => {
 
                 let Gerate = app_rollerData_unical // est égal aux datas innerHTML
                 let optioned_appliance = appliances_options 
+                let optioned_appliance_unique = optioned_appliance[i] // est égal aux data de TYPE html
 
-                Array.from(optioned_appliance).forEach((optioned_appliance_unique) => {
                 if(appliance_arr.includes(Gerate)){
                     optioned_appliance_unique.style.display = 'block';
 
                 }
                 else if(!appliance_arr.includes(Gerate) && filtered.length > 0){
-                        var p =0;
-                        // while (p < optioned_appliance.length) {
-                            // if (optioned_appliance_unique.value === Gerate) {
+                        let p =0;
+                        while (p < optioned_appliance.length) {
+                            if (optioned_appliance_unique.value === Gerate) {
                                 console.log(optioned_appliance_unique)
-                                // optioned_appliance_unique.style.display = 'none';
-                            // } 
-                            
-                            for(let i = 0; i < optioned_appliance.length; i++){
-                                if(optioned_appliance[i] === Gerate){
-                                optioned_appliance[i].style.display = 'none';
-                                }
+                                optioned_appliance_unique.style.display = 'none';
+                            } 
+                            else {
+                                ++p;
                             }
-                        //     else {
-                        //         ++p;
-                        //         // break
-                        //     }
-                        // break
+                        break
 
-                        // }
+                        }
                     }
-                })
             })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            ust_rollerData.forEach((ust_rollerData_unical) => {
+            ust_rollerData.forEach((ust_rollerData_unical, i) => {
                 let Werkzeug = ust_rollerData_unical// est égal aux datas innerHTML
                 let optioned_ustensils = ustensils_options 
-                // let optioned_ustensils_unique = optioned_ustensils[i] // est égal aux data de TYPE html
-                Array.from(optioned_ustensils).forEach((optioned_ustensils_unique) => {
+                let optioned_ustensils_unique = optioned_ustensils[i] // est égal aux data de TYPE html
                 if(ust_arr.includes(Werkzeug)){
                     optioned_ustensils_unique.style.display = 'block';
-
+                    optioned_ustensils_unique.classList.add('keycheck')
+                    // console.log(optioned_ustensils_unique)
                 }
                 else if(!ust_arr.includes(Werkzeug) && filtered.length > 0){
-                    // console.log('ne contient pas')
-                        var p =0;
+                        let p =0;
                         while (p < optioned_ustensils.length) {
                             if (optioned_ustensils_unique.value === Werkzeug) {
                                 optioned_ustensils_unique.style.display = 'none';
@@ -366,7 +326,6 @@ ingredient_rollerData.forEach((ingredient_rollerData_unical) => {
                 if ((!filtered) || (!recipeArray)){
                     optioned_ustensils_unique.style.display = " block ";
                 }
-                })
             })
         
 

@@ -56,8 +56,10 @@ selectValue(rolling, option_choice, cursor) {
         rolling.oninput = function () {
             currentFocus = -1;
             let text = rolling.value.toUpperCase();
+
             for (let i = 0; i < datalist.options.length; i++) {
                 let options = datalist.options[i];
+                console.log('la')
                 if (options.value.toUpperCase().indexOf(text) > -1) {
                     options.style.display = "block";
                     
@@ -65,36 +67,36 @@ selectValue(rolling, option_choice, cursor) {
                     options.style.display = "none";
                     overlay.style.display = 'none';
                 }
-            };
+            };     
         };
 
         let currentFocus = -1;
-        rolling.onkeydown = function (e) {
-            // console.log(datalist.options.length)
-            for (let i = 0; i < datalist.options.length; i++){
-                let options = datalist.options[i];
-                // console.log(options)
+        // rolling.onkeydown = function (e) {
+        //     // console.log(datalist.options.length)
+        //     for (let i = 0; i < datalist.options.length; i++){
+        //         let options = datalist.options[i];
+        //         // console.log(options)
 
 
-            if (e.keyCode == 40) {
-                currentFocus++;
-                // addActive(datalist.options);
-                // console.log(datalist.options)
-            }
-            else if (e.keyCode == 38) {
-                currentFocus--;
-                // addActive(datalist.options);
-            }
-            else if (e.keyCode == 13) {
-                e.preventDefault();
-                if (currentFocus > -1) {
-                    // Et on simule le click sur l'item active
-                    if (datalist.options)
-                        datalist.options[currentFocus].click();
-                }
-            }
-        }
-        };
+        //     if (e.keyCode == 40) {
+        //         currentFocus++;
+        //         // addActive(datalist.options);
+        //         // console.log(datalist.options)
+        //     }
+        //     else if (e.keyCode == 38) {
+        //         currentFocus--;
+        //         // addActive(datalist.options);
+        //     }
+        //     else if (e.keyCode == 13) {
+        //         e.preventDefault();
+        //         if (currentFocus > -1) {
+        //             // Et on simule le click sur l'item active
+        //             if (datalist.options)
+        //                 datalist.options[currentFocus].click();
+        //         }
+        //     }
+        // }
+        // };
 
         function pushIngredients(opted) {
             
