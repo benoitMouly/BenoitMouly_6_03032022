@@ -11,15 +11,16 @@ selectValue(rolling, option_choice, cursor) {
         // console.log(option_choice)
         rolling.stopImmediatePropagation();
         rolling = rolling.target
-        // console.log(rolling);                                                                                                                    // Pourquoi pas ajouter le paramètre de l'élément cliqué
+        // console.log(rolling);
+        let ariaz = rolling.setAttribute('aria-expanded', 'true')
         let after_input = rolling.nextSibling;
         let datalist = after_input.nextElementSibling;
         let datalistId = datalist.id
-        console.log(datalistId)
+        // console.log(datalistId)
         let main_parent = rolling.closest('.widz'); // main_parent se réfère à l'id (exemple ; " #col-appareil ")
         let chevron = rolling.nextElementSibling.querySelector('.bi'); // réfère au chevron le plus proche de rolling ( qui est le bouton )    
         datalist.style.display = 'block'; // datalist se réfère à la datalist
-        console.log(datalist)
+        // console.log(datalist)
         rolling.style.borderRadius = "5px 5px 0 0"; // rolling se réfère au bouton
         main_parent.classList.add('col-6');
         main_parent.classList.remove('col-2');
@@ -37,7 +38,7 @@ selectValue(rolling, option_choice, cursor) {
             option_choice.push(option.value);
             pushIngredients(rolling.value);
             rolling.value = null // On masque le value de l'input 
-            console.log(option_choice)
+            // console.log(option_choice)
             datalist.style.display = 'none';
             rolling.style.borderRadius = "5px";
             main_parent.classList.add('col-2');
@@ -46,6 +47,8 @@ selectValue(rolling, option_choice, cursor) {
             chevron.classList.remove('bi-chevron-up');
             overlay.style.display = 'none';
             main_parent.style.zIndex = '9';
+            ariaz = rolling.setAttribute('aria-expanded', 'false') // On remet l'aria expanded en false comme il se ferme
+
 
         }
     }
@@ -57,6 +60,7 @@ selectValue(rolling, option_choice, cursor) {
                 let options = datalist.options[i];
                 if (options.value.toUpperCase().indexOf(text) > -1) {
                     options.style.display = "block";
+                    
                 } else {
                     options.style.display = "none";
                     overlay.style.display = 'none';
@@ -107,7 +111,7 @@ selectValue(rolling, option_choice, cursor) {
             eltChoose.innerHTML = `<p class="opted">${opted}</p> <i class="bi bi-x-circle supp-choose option-elt search-element"></i> `;
             let supp_choose = document.querySelectorAll('.supp-choose');
            cursor = document.querySelector('.hovered')
-           console.log(cursor)
+        //    console.log(cursor)
             // console.log(option_choice + ' ----------------------------- ');
             // console.log(opted + ' poucheingredient');
 

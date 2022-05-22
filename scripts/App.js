@@ -20,7 +20,7 @@ class App {
     async main(e) {
 
         const recettesData = recipes;
-        console.log(this.$rollersWrapper)
+        // console.log(this.$rollersWrapper)
 
         recettesData
         .map(recette => new Recette(recette))
