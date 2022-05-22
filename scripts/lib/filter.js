@@ -159,7 +159,8 @@ class Filter {
                 // console.log(filtered)
                 // console.log('----')
                 $header_section.appendChild($elementError);
-                $elementError.innerHTML = 'Pas de recettes disponibles ...'
+                $elementError.innerHTML = '« Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc. \»\
+                '
             }
             tour ++;
         }  // Fin de la giga boucle
