@@ -11,14 +11,12 @@ selectValue(rolling, option_choice, cursor) {
         // console.log(option_choice)
         rolling.stopImmediatePropagation();
         rolling = rolling.target
-        console.log(rolling);
-        let test = rolling.setAttribute('aria-expanded', 'true')
-        // // test == true
-        // console.log(test)
+        // console.log(rolling);
+        let ariaz = rolling.setAttribute('aria-expanded', 'true')
         let after_input = rolling.nextSibling;
         let datalist = after_input.nextElementSibling;
         let datalistId = datalist.id
-        console.log(datalistId)
+        // console.log(datalistId)
         let main_parent = rolling.closest('.widz'); // main_parent se réfère à l'id (exemple ; " #col-appareil ")
         let chevron = rolling.nextElementSibling.querySelector('.bi'); // réfère au chevron le plus proche de rolling ( qui est le bouton )    
         datalist.style.display = 'block'; // datalist se réfère à la datalist
@@ -49,7 +47,7 @@ selectValue(rolling, option_choice, cursor) {
             chevron.classList.remove('bi-chevron-up');
             overlay.style.display = 'none';
             main_parent.style.zIndex = '9';
-            test = rolling.setAttribute('aria-expanded', 'false') // On remet l'aria expanded en false comme il se ferme
+            ariaz = rolling.setAttribute('aria-expanded', 'false') // On remet l'aria expanded en false comme il se ferme
 
 
         }
