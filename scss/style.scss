@@ -197,3 +197,7 @@ option {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  datalist{
+      display: none;
+  }
