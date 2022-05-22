@@ -70,7 +70,7 @@ selectValue(rolling, option_choice, cursor) {
 
         let currentFocus = -1;
         rolling.onkeydown = function (e) {
-            console.log(datalist.options.length)
+            // console.log(datalist.options.length)
             for (let i = 0; i < datalist.options.length; i++){
                 let options = datalist.options[i];
                 // console.log(options)
